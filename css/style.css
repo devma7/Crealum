@@ -466,10 +466,43 @@ background-color: #ffffff00;;
 /* media query */
 
  @media screen and (max-width:1199px) {
-/* **************sections*****************/
+
+/* sections */
 #about-us .content, #our-products .content, #contact-us .content, footer .content, #services .content, #product-item .content{
   padding: 35px 5px;
 }
+/* about-us section */
+#about-us .content p{
+  padding: 0;
+  font-size: 1.4em;
+}
+#about-us .content ul li{
+  margin-bottom: 35px;
+}
+/* our-products section */
+#our-products .content .item .content{
+  border-bottom-color:#000;
+}
+#our-products .content .item .content .title{
+  box-shadow: 5px 5px 5px 8px #000503
+}
+/* footer */
+footer .content p{
+display: block;
+ width: 100%;
+ padding: 10px 0;
+ text-align: center;
+ font-size: 1.1em;
+}
+footer .content  ul{
+ display: block;
+ text-align: center;
+ width: 100%;
+}
+footer .content  ul li{
+ margin: 0 5px;
+}
+
    /* *** ********************** */
 /*   .main {
     margin-top: 10px;
@@ -546,17 +579,7 @@ right: 0;
 left: 0;
 z-index: 99999;
 }
-   footer p{
-     display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-   }
-   footer ul{
-    display: block;
-    text-align: center;
-    width: 100%;
-   }
+
    .main .navbar-brand{
      padding: 15px
    }
