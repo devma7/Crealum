@@ -39,11 +39,9 @@ app.run(function($rootScope,$http,$window,$routeParams,cfpLoadingBar) {
 
 
          });
-
-
   var getReq = {
       method: 'GET',
-      url: 'getImages.php'
+      url: 'getImages.inc.php'
      }
      var onSuccess = function (success){
        //console.log(success.data);
