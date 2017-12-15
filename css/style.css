@@ -466,7 +466,21 @@ background-color: #ffffff00;;
 /* media query */
 
  @media screen and (max-width:1199px) {
-
+/* navbar */
+.main {
+   margin-top: 10px;
+  }
+.navbar-nav .open .dropdown-menu>li>a{
+  padding: 15px 0;
+  color: #8c8c8c;
+  border-bottom: 1px solid
+}
+.main .navbar-brand{
+  padding: 15px
+}
+.main .navbar{
+  padding: 10px;
+}
 /* sections */
 #about-us .content, #our-products .content, #contact-us .content, footer .content, #services .content, #product-item .content{
   padding: 35px 5px;
@@ -504,14 +518,8 @@ footer .content  ul li{
 }
 
    /* *** ********************** */
-/*   .main {
-    margin-top: 10px;
-   }
-   .navbar-nav .open .dropdown-menu>li>a{
-     padding: 15px 0;
-     color: #8c8c8c;
-     border-bottom: 1px solid
-   }
+/*
+
    .info h4{
      font-size: 2em;
    }
