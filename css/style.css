@@ -525,6 +525,11 @@ background-color: #ffffff00;;
 #contact-us .content form button{
   float: none;
   margin: auto;
+  color: #FFF;
+  font-size: 1.4em;
+  background-color: #337ab7;
+  width: 87%;
+  border-radius: 10px;
 }
 #contact-us .content .info{
   padding: 0;
