@@ -466,7 +466,12 @@ background-color: #ffffff00;;
 /* media query */
 
  @media screen and (max-width:1199px) {
-   .main {
+/* **************sections*****************/
+#about-us .content, #our-products .content, #contact-us .content, footer .content, #services .content, #product-item .content{
+  padding: 35px 5px;
+}
+   /* *** ********************** */
+/*   .main {
     margin-top: 10px;
    }
    .navbar-nav .open .dropdown-menu>li>a{
@@ -557,7 +562,7 @@ z-index: 99999;
    }
    .main .navbar{
      padding: 10px;
-   }
+   }*/
  }
 
  @media screen and (max-width: 1199px) and (min-width: 992px) {}
