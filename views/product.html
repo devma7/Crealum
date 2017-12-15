@@ -1,0 +1,38 @@
+
+            <section  ng-controller="productControler"  id="product-item">
+            <!--  <div class="title">
+                <h4>Produits <span></span> {{productTypeName}}</h4>
+                 <<span class="squar"></span>
+              </div> -->
+            <ul class="breadcrumb">
+              <li><a href="#">Produits</a></li>
+              <li class="active" >{{productTypeName}}</li>
+            </ul>
+            <div class="content">
+              <ul  id="lightgallery" class="list-unstyled row">
+                 <li ng-repeat="img in images" class="col-xs-12 col-sm-4 col-md-3"  data-src="img/fenetres/1.jpg"  data-sub-html="">
+                      <a href="">
+                         <img  ng-src="img/{{product_type}}/{{img}}" alt=""  >
+                      </a>
+                  </li>
+               </ul>
+            </div>
+           </section>
+
+
+
+              <!-- scripts for product items -->
+              <script src="js/lightgallery-all.js"></script>
+               <script src="js/js-modules/jquery.mousewheel.min.js"></script>
+
+               <!-- lightgallery plugins -->
+
+                <!-- galleryFixer -->
+                <script src="js/galleryFixer.js" type="text/javascript">  </script>
+
+               <!--/ scripts for product items -->
+               <script type="text/javascript">
+               $(document).ready(function(){
+                       $('#lightgallery').lightGallery();
+                   });
+                 </script>

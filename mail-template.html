@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Raleway|Catamaran">
+<title>Demande d\'un devis</title>
+<style>
+
+body{
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+h1 {
+  font-size: 22px;
+  padding: 10px;
+}
+
+.message h3{
+  padding: 10px;
+  font-weight: normal;
+}
+.message p{
+  padding: 10px 0;
+  text-align: justify;
+  font-weight: bold;
+}
+h3 > strong{
+margin: 0px 10px;
+text-decoration: underline;
+}
+.item{
+  padding:  0 5px;
+  margin: 5px 0;
+
+}
+.item h4{
+  padding: 0;
+  font-weight: normal;
+}
+..item h4> strong{
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>Demande d\'un devis:</h1>
+
+<div class="item">
+  <h4>Nom : <strong>'.$data->nom .'</strong></h4>
+  <h5>demp</h5>
+</div>
+<div class="item">
+  <h4>Prénom : <strong>'.$data->prenom .'</strong></h4>
+</div>
+<div class="item">
+  <h4>Email : <strong>'.$data->email .'</strong></h4>
+</div>
+<div class="item">
+  <h4>Téléphone : <strong>'.$data->telephone .'</strong></h4>
+</div>
+
+<div class="message">
+  <h3>Besoin de : <strong>'.$data->product.'</strong></h3>
+  <p>'.$data->message.'</p>
+</div>
+</body>
+</html>

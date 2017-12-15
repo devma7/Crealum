@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Crealum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/lightgallery.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Latest compiled Angularjs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <!-- Latest compiled angular-route -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <!-- Latest compiled angular-animate -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.min.js"></script>
+
+
+  <link rel='stylesheet' href='build/loading-bar.min.css' type='text/css' media='all' />
+  <script type='text/javascript' src='build/loading-bar.min.js'></script>
+
+
+
+</head>
+
+
+<body>
+<div ng-app="crealumApp" class="container">
+  <div class="main">
+    <!-- Navbar -->
+    <div ng-include="'views/includes/navbar.html'"></div>
+    <div class="content">
+    <div class="ng-view" autoscroll="true"></div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div ng-include="'views/includes/footer.html'"></div>
+
+ </div>
+
+
+<script src="app.js"></script>
+<script src="controllers/contactControler.js"></script>
+<script src="controllers/productControler.js"></script>
+
+</body>
+</html>
