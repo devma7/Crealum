@@ -222,6 +222,7 @@ footer .content ul li a:hover{
   right: 35px;
   border-radius: 100%;
   display: none;
+  cursor: pointer;
 }
 .top > i{
   padding: 0;

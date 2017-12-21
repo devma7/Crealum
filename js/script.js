@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(this).scroll(function(){
     var y = $(this).scrollTop();
-    var showPosition = 800;
+    var showPosition = 400;
     if (y> showPosition) {
       $(".top").show();
     }else {
