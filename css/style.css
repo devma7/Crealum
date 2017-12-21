@@ -74,7 +74,8 @@ body{
   border-radius: 0;
   border-bottom-right-radius:  5px;
   border-bottom-left-radius:  5px;
-  overflow: auto;
+  overflow: hidden;
+
   }
  #about-us .title, #our-products .title,#contact-us .title, #services .title{
   padding: 10px 0px;
@@ -208,6 +209,26 @@ footer .content ul li{
 }
 footer .content ul li a:hover{
   text-decoration: none;
+  color: #fff;
+}
+.top{
+  background-color: #758791c9;
+  padding: 10px 0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 100px;
+  right: 35px;
+  border-radius: 100%;
+  display: none;
+}
+.top > i{
+  padding: 0;
+  margin: 0;
+  font-size: 23px;
+  width: 30px;
+  height: 31px;
   color: #fff;
 }
 /* social */
@@ -455,7 +476,7 @@ background-color: #ffffff00;;
 /* validation classes */
 .ng-invalid   p{
   color: rgb(166, 87, 4) !important;
-  float: left;
+  margin: 2px 0 0 0;
 }
 .has-error .form-control{
   border-color: #a94442 !important;
@@ -566,92 +587,3 @@ footer .content  ul li{
 }
 
    /* *** ********************** */
-/*
-
-   .info h4{
-     font-size: 2em;
-   }
-   .info p{
-     padding: 10px 0px;
-     text-align: justify;
-   }
-   .info ul li{
-     margin-bottom: 40px;
-   }
-   .info ul li img{
-     width: 35px;
-   }
-   #last{
-     margin-bottom: 0 !important;
-   }
-   .item{
-     margin-bottom: 20px;
-   }
-   .service-item{
-     padding: 10px;
-   }
-  .service-item img{
-    border-radius: 0;
-    background: transparent url("../img/loading.gif") center no-repeat
-  }
-   .services, .contact .info{
-     padding: 0;
-   }
-   .contact {
-   padding: 40px 0;
-   }
-   .contact .info h3{
-    font-size: 2em;
-    text-align: center;
-   }
-   .contact .info p{
-     text-align: justify;
-      padding: 0;
-}
-.contact .cordonnee li {
-  margin-bottom: 0 !important;
-}
-#map{
-  margin: 30px 0px;
-}
-.contact form{
-  border-radius: 0;
-  margin: 20px 10px 30px 10px;
-  padding: 20px 5px;
-}
-.contact .help-block{
-  text-align: left;
-}
-.contact > h3{
-  text-align: center;
-}
-.alert{
-  position: fixed;
-width: 88%;
-margin: auto;
-display: block;
-top: 15px;
-right: 0;
-left: 0;
-z-index: 99999;
-}
-
-   .main .navbar-brand{
-     padding: 15px
-   }
-   .main .navbar{
-     padding: 10px;
-   }*/
- }
-
- @media screen and (max-width: 1199px) and (min-width: 992px) {}
-
- @media screen and (max-width:991px) {}
-
- @media screen and (max-width:767px) {}
-
- @media screen and (max-width: 480px) {}
-
- @media screen and (max-width: 420px) {
-
-  }
