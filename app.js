@@ -13,8 +13,18 @@ app.config(function($routeProvider,cfpLoadingBarProvider){
 })
 .when("/services",{
   templateUrl:"views/services.html"
+})
+// arabic
+.when("/ar",{templateUrl:"views/ar/main.html"})
+.when("/produit/:produit_type/ar",{
+    templateUrl:"views/ar/product.html",
+  })
+.when("/contact/ar",{
+  templateUrl:"views/ar/contact.html",
+})
+.when("/services/ar",{
+  templateUrl:"views/ar/services.html"
 });
-/*   .when("/green",{templateUrl:"green.html"});*/
 });
 
 app.run(function($rootScope,$http,$window,$routeParams,cfpLoadingBar) {
