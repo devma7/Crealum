@@ -152,7 +152,7 @@ body{
 /* section our-products */
 
 #our-products .content .row {
-  margin-top: 30px;
+/*  margin-top: 30px;*/
 }
 
 #our-products .content .item .content{
@@ -160,6 +160,7 @@ body{
   text-decoration: none;
   border: 1px solid #ccc;
   overflow: auto;
+  margin-bottom: 20px;
 }
 #our-products .content .item .content a{
  text-decoration: none;

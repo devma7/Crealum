@@ -46,7 +46,7 @@ text-decoration: underline;
   padding: 0;
   font-weight: normal;
 }
-..item h4> strong{
+.item h4> strong{
   font-weight: bold;
 }
 </style>
