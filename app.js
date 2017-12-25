@@ -27,7 +27,7 @@ app.config(function($routeProvider,cfpLoadingBarProvider){
 });
 });
 
-app.run(function($rootScope,$http,$window,$routeParams,cfpLoadingBar) {
+app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) {
 
   $rootScope.$on("$locationChangeStart", function(event, next, current) {
        cfpLoadingBar.start();
@@ -40,9 +40,22 @@ app.run(function($rootScope,$http,$window,$routeParams,cfpLoadingBar) {
 
         if (document.readyState == 'complete') {
       //    $window.animate({scrollTop:0},1500);
+        }
+        // get url
+        var url = $location.path();
+        if(url.indexOf("/ar")> -1){
+            $rootScope.url= $location.path().slice(0,$location.path().length-3);
+            $rootScope.url_ar = url;
+        }else {
+          if(url == "/"){
+            $rootScope.url = url;
+            $rootScope.url_ar = "/ar";
+          }else {
+            $rootScope.url = url;
+            $rootScope.url_ar = url+"/ar";
+          }
 
         }
-
 
 
          });

@@ -1,7 +1,9 @@
 
 
-app.controller("productControler",function($scope,$rootScope,$http,$routeParams){
-  $scope.product_type=$routeParams.produit_type;
+app.controller("productController",function($scope,$rootScope,$http,$routeParams){
+
+  // products controller
+  $rootScope.product_type=$routeParams.produit_type;
   var all_Images = $rootScope.Allimages;
   $scope.images = all_Images[$scope.product_type];
 

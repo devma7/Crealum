@@ -1,5 +1,5 @@
 
-app.controller("contactControler",function($scope,$http,sendEmail){
+app.controller("contactController",function($scope,$http,sendEmail){
 // $scope.product =  $scope.selectOptions[0];
 $scope.villeinput = "Casablanca";
 $scope.ville= "0";

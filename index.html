@@ -22,33 +22,37 @@
   <!-- Latest compiled angular-animate -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.min.js"></script>
 
-
   <link rel='stylesheet' href='build/loading-bar.min.css' type='text/css' media='all' />
   <script type='text/javascript' src='build/loading-bar.min.js'></script>
-
-
 
 </head>
 
 
 <body>
 <div ng-app="crealumApp" class="container">
-  <div class="main">
+  <div class="main"  ng-controller="mainController">
     <!-- Navbar -->
-    <div ng-include="'views/includes/navbar.html'"></div>
+<!--
+    <div ng-include="isFranch ? 'views/includes/navbar.html' : 'views/includes/ar/navbar.html'"></div>
+-->
+<div ng-include="'views/includes/navbar.html'"></div>
+
+    {{url}}
     <div class="content">
-    <div class="ng-view" autoscroll="true"></div>
+
+    <div class="ng-view" autoscroll="true">  </div>
     </div>
   </div>
   <!-- Footer -->
-  <div ng-include="'views/includes/footer.html'"></div>
-
+  <div ng-show="isFranch" ng-include="'views/includes/footer.html'"></div>
  </div>
 
 
 <script src="app.js"></script>
-<script src="controllers/contactControler.js"></script>
-<script src="controllers/productControler.js"></script>
+<script src="controllers/contactController.js"></script>
+<script src="controllers/productController.js"></script>
+<script src="controllers/mainController.js"></script>
+
 <script src="services/sendEmailService.js"></script>
 
 
