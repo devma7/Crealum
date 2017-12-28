@@ -36,12 +36,14 @@ app.service("sendEmail",function(){
     }
   }
     function resetData(){
-     delete  $scope.nom
-     delete  $scope.prenom
-     delete  $scope.telephone
-     delete  $scope.email
-     delete $scope.product
-     delete $scope.message
+       $scope.nom = null;
+       $scope.prenom = null;
+       $scope.telephone = null;
+       $scope.email = null;
+      //$scope.villeinput = null;
+      $scope.message = null;
+      $scope.emailForm.$setUntouched();
+    $scope.emailForm.$setPristine();
     }
   }
 });

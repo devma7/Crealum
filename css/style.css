@@ -600,6 +600,14 @@ background-color: #ffffff00;;
 #contact-us .content .info .cordonnee li{
   font-size: 1.5em;
 }
+.alert{
+     position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    top: 0;
+    border-radius: 0;
+}
 /* footer */
 footer .content{
   padding-bottom: 0;

@@ -1,5 +1,5 @@
 
-app.controller("contactController",function($scope,$http,sendEmail){
+app.controller("contactController",function($scope,$http,sendEmail,$window){
 // $scope.product =  $scope.selectOptions[0];
 $scope.villeinput = "Casablanca";
 $scope.ville= "0";
@@ -16,5 +16,6 @@ $scope.changeCity = function(){
 }
 // send email service
 sendEmail.send($scope,$http);
+$window.animate({scrollTop:0},1500);
 
 });
