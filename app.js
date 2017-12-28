@@ -46,6 +46,7 @@ app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) 
         if(url.indexOf("/ar")> -1){
             $rootScope.url= $location.path().slice(0,$location.path().length-3);
             $rootScope.url_ar = url;
+
         }else {
           if(url == "/"){
             $rootScope.url = url;
@@ -56,7 +57,11 @@ app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) 
           }
 
         }
-
+        if(url.indexOf("/ar") > -1){
+            $rootScope.isFranch = false;
+        }else {
+            $rootScope.isFranch = true;
+        }
 
          });
   var getReq = {

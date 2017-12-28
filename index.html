@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="crealumApp" >
 
 <head>
   <title>Crealum</title>
@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="css/lightgallery.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link ng-if="!isFranch" rel="stylesheet" href="css/ar.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
@@ -29,22 +30,23 @@
 
 
 <body>
-<div ng-app="crealumApp" class="container">
+<div class="container">
   <div class="main"  ng-controller="mainController">
     <!-- Navbar -->
 <!--
     <div ng-include="isFranch ? 'views/includes/navbar.html' : 'views/includes/ar/navbar.html'"></div>
 -->
-<div ng-include="'views/includes/navbar.html'"></div>
-
-    {{url}}
+<div ng-if="isFranch" ng-include="'views/includes/navbar.html'"></div>
+<div ng-if="!isFranch" ng-include="'views/includes/ar/navbar.html'"></div>
     <div class="content">
 
     <div class="ng-view" autoscroll="true">  </div>
     </div>
   </div>
   <!-- Footer -->
-  <div ng-show="isFranch" ng-include="'views/includes/footer.html'"></div>
+  <div ng-if="isFranch" ng-include="'views/includes/footer.html'"></div>
+  <div ng-if="!isFranch" ng-include="'views/includes/ar/footer.html'"></div>
+
  </div>
 
 

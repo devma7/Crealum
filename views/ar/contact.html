@@ -1,103 +1,110 @@
 <section id="contact-us">
   <div class="title">
-    <h4>أطلب دوفي مجاني</h4>
+    <h4>إتصل بنا</h4>
   </div>
   <div class="content" ng-controller="contactController" >
+    <div class="info col-md-12">
+      <p>هل ترغب في تجديد منزلك الحالي أو مقر عملك ؟ أو قمت بشراء منزل جديد ؟ وتلزمك بعض الإستشارات و الإستفسار عن الأسعار, يكفي مراسلتنا عبر ملئ الإستمارة التالية, وسوف يقوم موظفونا بالإتصال بكم بمجرد تلقي الطلب</p>
+    </div>
+    <div class="col-md-6 col-md-push-6">
     <div ng-show="emailSend != undefined && emailSend" class="alert alert-success text-center fade in">
      <a href="" class="close"  aria-label="close">&times;</a>
-      votre message a été envoyé avec succès
+      تم إرسال الرسالة بنجاح
     </div>
     <div ng-show="emailSend != undefined && !emailSend" class="alert alert-danger text-center  fade in">
     <a href="" class="close" aria-label="close">&times;</a>
-      erreur : message non envoyé
+      خطأ: لم يتم إرسال الرسالة
     </div>
-   <form ng-submit="sendMail(emailForm.$valid)" name="emailForm" class="col-md-6" novalidate >
+
+   <form ng-submit="sendMail(emailForm.$valid)" name="emailForm" class="col-md-12" novalidate >
      <div class="form-group col-md-6" ng-class="{ 'has-error' : emailForm.nom.$invalid && emailForm.nom.$touched, 'has-success': emailForm.nom.$valid && !emailForm.nom.$pristine}">
-       <label for="nom" class="sr-only">Nom</label>
+       <label for="nom" class="sr-only">الإسم العائلي</label>
        <div class="input-group">
+         <input ng-model="nom" ng-pattern="/^[a-zA-Z\s'àâäçéèêëîïôöùûüÿ\u0621-\u064A\u0660-\u0669]*$/" ng-minlength="1" ng-maxlength="18"  class="form-control " type="text" name="nom" value="" placeholder="الإسم العائلي" required >
          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-         <input ng-model="nom" ng-pattern="/^[a-zA-Z\s'àâäçéèêëîïôöùûüÿ]*$/" ng-minlength="1" ng-maxlength="18"  class="form-control " type="text" name="nom" value="" placeholder="Nom" required >
       </div>
-       <p ng-show="emailForm.nom.$invalid && emailForm.nom.$dirty " class="help-block">Enter un nom valide</p>
-       <p ng-show="emailForm.nom.$invalid &&  emailForm.nom.$touched && emailForm.nom.$pristine" class="helpe-block">Le champ nom est obligatoire</p>
+       <p ng-show="emailForm.nom.$invalid && emailForm.nom.$dirty " class="help-block">أدخل إسمك العائلي</p>
+       <p ng-show="emailForm.nom.$invalid &&  emailForm.nom.$touched && emailForm.nom.$pristine" class="helpe-block">إسمك العائلي ضروري</p>
       </div>
 
      <div class="form-group col-md-6" ng-class="{ 'has-error' : emailForm.prenom.$invalid && emailForm.prenom.$touched, 'has-success': emailForm.prenom.$valid && !emailForm.prenom.$pristine}">
-       <label for="prenom" class="sr-only">Prénom</label>
+       <label for="prenom" class="sr-only">الإسم الشخصي</label>
       <div class="input-group">
+        <input ng-model="prenom" ng-pattern="/^[a-zA-Z\s'àâäçéèêëîïôöùûüÿ\u0621-\u064A\u0660-\u0669]*$/" ng-minlength="1" ng-maxlength="18" class="form-control " type="text" name="prenom" value="" placeholder="الإسم الشخصي" required>
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input ng-model="prenom" ng-pattern="/^[a-zA-Z\s'àâäçéèêëîïôöùûüÿ]*$/" ng-minlength="1" ng-maxlength="18" class="form-control " type="text" name="prenom" value="" placeholder="Prénom" required>
       </div>
-       <p ng-show="emailForm.prenom.$invalid && emailForm.prenom.$dirty" class="help-block">Enter un prénom valide.</p>
-       <p ng-show="emailForm.prenom.$touched && emailForm.prenom.$invalid && emailForm.prenom.$pristine" class="helpe-block">Le champ prénom est obligatoire</p>
+       <p ng-show="emailForm.prenom.$invalid && emailForm.prenom.$dirty" class="help-block">أدخل إسمك الشخصي</p>
+       <p ng-show="emailForm.prenom.$touched && emailForm.prenom.$invalid && emailForm.prenom.$pristine" class="helpe-block">إسمك الشخصي ضروري</p>
      </div>
 
      <div class="form-group col-md-12" ng-class="{ 'has-error' : emailForm.telephone.$invalid && emailForm.telephone.$touched, 'has-success': emailForm.telephone.$valid && !emailForm.telephone.$pristine}">
-       <label for="telephone" class="sr-only">Téléphone</label>
+       <label for="telephone" class="sr-only">رقم الهاتف</label>
        <div class="input-group">
+         <input ng-model="telephone" ng-pattern="/^-?[0-9][^\.]*$/" ng-minlength="10"  ng-maxlength="16" class="form-control"  type="text" name="telephone"  placeholder="رقم الهاتف" required>
          <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-         <input ng-model="telephone" ng-pattern="/^-?[0-9][^\.]*$/" ng-minlength="10"  ng-maxlength="16" class="form-control"  type="text" name="telephone"  placeholder="Téléphone" required>
        </div>
-       <p ng-show="emailForm.telephone.$invalid && emailForm.telephone.$dirty" class="help-block">Enter un téléphone valide.</p>
-       <p ng-show="emailForm.telephone.$invalid && emailForm.telephone.$touched && emailForm.telephone.$pristine" class="helpe-block">Le champ téléphone est obligatoire</p>
+       <p ng-show="emailForm.telephone.$invalid && emailForm.telephone.$dirty" class="help-block">أدخل رقم هاتف صحيح</p>
+       <p ng-show="emailForm.telephone.$invalid && emailForm.telephone.$touched && emailForm.telephone.$pristine" class="helpe-block">رقم الهاتف ضروري</p>
      </div>
 
      <div class="form-group  col-md-12" ng-class="{ 'has-error' : emailForm.email.$invalid && emailForm.email.$touched, 'has-success': emailForm.email.$valid && !emailForm.email.$pristine}">
-       <label for="email" class="sr-only">Email</label>
+       <label for="email" class="sr-only">البريد الإلكتروني</label>
        <div class="input-group">
+         <input ng-model="email" class="form-control " ng-minlength="6"  type="email" name="email" value="" placeholder="البريد الإلكتروني" required>
          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-         <input ng-model="email" class="form-control " ng-minlength="6"  type="email" name="email" value="" placeholder="Email" required>
        </div>
-       <p ng-show="emailForm.email.$invalid && emailForm.email.$dirty" class="help-block">Enter un email valide.</p>
-       <p ng-show="emailForm.telephone.$invalid && emailForm.email.$touched && emailForm.email.$pristine" class="helpe-block">Le champ email est obligatoire</p>
+       <p ng-show="emailForm.email.$invalid && emailForm.email.$dirty" class="help-block">أدخل بريد إلكتروني صحيح</p>
+       <p ng-show="emailForm.telephone.$invalid && emailForm.email.$touched && emailForm.email.$pristine" class="helpe-block">البريد الإلكتروني ضروري</p>
      </div>
 
       <div class="form-group col-md-12 ">
-        <div class="col-md-6">
+        <div class="ville col-md-6 col-md-push-6">
           <div class="radio-inline">
-            <label><input ng-click="changeCity()" ng-model="ville" type="radio" name="ville" value="0" checked>Casablanca
+            <label>
+              الدار البيضاء
+            <input ng-click="changeCity()" ng-model="ville" type="radio" name="ville" value="0" checked>
             <span class="checkmark"></span>
             </label>
           </div>
           <div class="radio-inline">
-            <label><input ng-click="changeCity()" ng-model="ville" type="radio" name="ville" value="1">Autre
+            <label>
+              مدينة أخرى
+            <input ng-click="changeCity()" ng-model="ville" type="radio" name="ville" value="1">
             <span class="checkmark"></span>
             </label>
           </div>
         </div>
      </div>
-       <div ng-show="showCity" class="form-group col-md-6" ng-class="{ 'has-error' : emailForm.villeinput.$invalid && emailForm.villeinput.$touched, 'has-success': emailForm.villeinput.$valid && !emailForm.villeinput.$pristine}">
-         <label for="villeinput" class="sr-only">Ville</label>
+       <div ng-show="showCity" class="form-group col-md-6 col-md-push-6" ng-class="{ 'has-error' : emailForm.villeinput.$invalid && emailForm.villeinput.$touched, 'has-success': emailForm.villeinput.$valid && !emailForm.villeinput.$pristine}">
+         <label for="villeinput" class="sr-only">المدينة</label>
          <div class="input-group">
+           <input ng-model="villeinput" ng-pattern="/^[a-zA-Z\s'àâäçéèêëîïôöùûüÿ\u0621-\u064A\u0660-\u0669]*$/" ng-minlength="3" ng-maxlength="10"  class="form-control " type="text" name="villeinput" value="" placeholder="المدينة" required>
            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-           <input ng-model="villeinput" ng-pattern="/^[a-zA-Z\s'àâäçéèêëîïôöùûüÿ]*$/" ng-minlength="3" ng-maxlength="10"  class="form-control " type="text" name="villeinput" value="" placeholder="ville" required>
          </div>
-         <p ng-show="emailForm.villeinput.$invalid && emailForm.villeinput.$dirty" class="help-block">Enter une ville valide.</p>
-         <p ng-show="emailForm.villeinput.$touched && emailForm.villeinput.$invalid && emailForm.villeinput.$pristine" class="helpe-block">Le champ ville est obligatoire</p>
+         <p ng-show="emailForm.villeinput.$invalid && emailForm.villeinput.$dirty" class="help-block">أدخل مدينتك</p>
+         <p ng-show="emailForm.villeinput.$touched && emailForm.villeinput.$invalid && emailForm.villeinput.$pristine" class="helpe-block">إسم المدينة ضروري</p>
        </div>
 
      <div class="form-group  col-md-12" ng-class="{ 'has-error' : emailForm.message.$invalid && emailForm.message.$touched, 'has-success': emailForm.message.$valid && !emailForm.message.$pristine}">
-       <p ng-show="emailForm.message.$touched && emailForm.message.$invalid &&  emailForm.message.$pristine" class="helpe-block">Le champ message est obligatoire</p>
-       <p ng-show="emailForm.message.$invalid && emailForm.message.$dirty" class="help-block">Enter un message valide..</p>
-       <textarea ng-model="message" class="form-control " ng-maxlength="300" name="message" rows="8" cols="80"  placeholder="Plus de détails" required></textarea>
+       <p ng-show="emailForm.message.$touched && emailForm.message.$invalid &&  emailForm.message.$pristine" class="helpe-block">أكتب رسالتك</p>
+       <textarea ng-model="message" class="form-control " ng-maxlength="300" name="message" rows="8" cols="80"  placeholder="مزيد من التفاصيل" required></textarea>
      </div>
 
-    <button ng-disabled="emailForm.$invalid" type="submit" class="btn btn-primary">Envoyer</button>
+    <button ng-disabled="emailForm.$invalid" type="submit" class="btn btn-primary">إرسال</button>
    </form>
-   <div class="info col-md-6">
-     <div class="col-md-12">
-       <p>Vous avez acheté une maison, villa, pavillon ? Ou vous souhaitez rénover votre habitation actuelle ?
-       Faites appel à l'équipe de menuisiers de notre atelier pour obtenir un devis concernant vos menuiseries aluminium</p>
-       <ul class="cordonnee">
-         <li><i class="fa fa-phone" ></i>+212 650 345 544</li>
-         <li><i class="fa fa-envelope-o" ></i>contact@crealum.ma</li>
-         <li><i class="fa fa-whatsapp" ></i>+212 566 230 112</li>
-       </ul>
-     </div>
+   </div>
+   <div class="info col-md-6 col-md-pull-6">
      <div class="col-md-12">
        <div id="map" style="width:100%"></div>
      </div>
-   </div>
+     <div class="col-md-12">
+       <ul class="cordonnee">
+         <li>+212 650 345 544<i class="fa fa-phone" ></i></li>
+         <li>contact@crealum.ma<i class="fa fa-envelope-o" ></i></li>
+         <li>+212 566 230 112<i class="fa fa-envelope" ></i></li>
+       </ul>
+     </div>
+     </div>
 </section>
  </div>
  <!-- for contact -->
