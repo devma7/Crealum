@@ -2,12 +2,12 @@
 
 /* Navbar */
 .main .nav > li > a,.dropdown-menu li>a,h4,h3,p,
-#about-us .content > a, #services .content > a, #product-item .content >a,input,textarea,button,label
+#about-us .content > a, #services .content > a, #product-item .content >a,input,textarea,button,label,.alert
+,li,#product-item .breadcrumb li >a
 {
   font-family: 'Cairo', sans-serif !important;
 
 }
-
 
 .main .navbar-header{
   float: right;
@@ -61,5 +61,8 @@
   padding-right: 0;
 }
 #contact-us .content form textarea{
+  text-align: right;
+}
+#product-item .breadcrumb{
   text-align: right;
 }

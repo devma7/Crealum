@@ -280,7 +280,9 @@ footer .content ul li a:hover{
 
 #contact-us .content .info p{
  padding:  0;
- text-align: left;
+ text-align: center;
+ font-size: 1.2em;
+ padding: 15px 0;
 }
 #contact-us .content .info .cordonnee li{
   list-style: none;

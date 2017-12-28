@@ -24,7 +24,7 @@ app.service("sendEmail",function(){
        $scope.emailSend = true;
        resetData();
      }else {
-       console.log('Error: email not send'+$scope.telephone);
+       console.log('Error: email not send');
        $scope.emailSend = false;
      }
    }

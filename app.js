@@ -14,6 +14,9 @@ app.config(function($routeProvider,cfpLoadingBarProvider){
 .when("/services",{
   templateUrl:"views/services.html"
 })
+.when("/produits",{
+  templateUrl:"views/allProducts.html"
+})
 // arabic
 .when("/ar",{templateUrl:"views/ar/main.html"})
 .when("/produit/:produit_type/ar",{
@@ -24,6 +27,9 @@ app.config(function($routeProvider,cfpLoadingBarProvider){
 })
 .when("/services/ar",{
   templateUrl:"views/ar/services.html"
+})
+.when("/produits/ar",{
+  templateUrl:"views/ar/allProducts.html"
 });
 });
 
@@ -59,8 +65,10 @@ app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) 
         }
         if(url.indexOf("/ar") > -1){
             $rootScope.isFranch = false;
+            $rootScope.language = "/ar";
         }else {
             $rootScope.isFranch = true;
+            $rootScope.language = ""
         }
 
          });
@@ -73,7 +81,7 @@ app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) 
      $rootScope.Allimages = success.data;
       }
      var onError = function (error){
-     $rootScope.Allimages = error.status;
+     $rootScope.Allimages = undefined;
     //console.log(error.status);
        }
     $http(getReq).then(onSuccess,onError);

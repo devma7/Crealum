@@ -1,8 +1,8 @@
 
             <section  ng-controller="productController"  id="product-item">
             <ul class="breadcrumb">
-              <li><a href="#">منتجات</a></li>
-              <li class="active" >{{productTypeName}}</li>
+              <li class="active" >{{productTypeNameAr}}</li>
+              <li><a href="#!produits{{language}}">منتجاتنا</a></li>
             </ul>
             <div class="content">
               <ul  id="lightgallery" class="list-unstyled row">
@@ -12,20 +12,20 @@
                       </a>
                   </li>
                </ul>
-               <a href="#!contact">contacter nous maintenant</a>
+               <a href="#!contact{{language}}">إتصل بنا</a>
             </div>
            </section>
            <section ng-controller="productController"  id="our-products">
              <div class="title">
-               <h4>Autre Réalisations</h4>
+               <h4>منتوجات أخرى</h4>
              </div>
              <div class="content">
               <div ng-repeat="item in otherProductsList" class="item col-md-4">
                    <div class="content">
-                     <a href="#!produit/{{item.href}}">
+                     <a href="#!produit/{{item.href}}{{language}}">
                        <img src="{{item.img}}" alt="">
                        <div class="title text-center">
-                         <h3>{{item.title}}</h3>
+                         <h3>{{item.titleAr}}</h3>
                        </div>
                      </a>
                    </div>

@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)){
 //   $_POST = json_decode(file_get_contents('php://input'), true);
    $data = file_get_contents('php://input');
-  // $data = json_decode($data);
+   $data = json_decode($data);
 
 $to = "mohamedaitlarayek@gmail.com";
 $subject = "Crealum";
@@ -68,13 +68,11 @@ text-decoration: underline;
 </div>
 
 <div class="message">
-  <h3>Besoin de : <strong>'.$data->product.'</strong></h3>
+  <h3>Besoin de : <strong>'.$data->ville.'</strong></h3>
   <p>'.$data->message.'</p>
 </div>
 </body>
 </html>
-
-
 ';
 
 // Always set content-type when sending HTML email
@@ -85,13 +83,14 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers .= 'From: <contact@crealum.ma>' . "\r\n";
 //$headers .= 'Cc: myboss@example.com' . "\r\n";
 //send email
-echo "Hello world";
-/*if(mail($to,$subject,$message,$headers)){
+//echo "Hello world";
+
+if(mail($to,$subject,$message,$headers)){
   echo 'true';
 }
 else{
   echo 'false';
-}*/
+}
  }
 
  ?>

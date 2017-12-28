@@ -9,13 +9,29 @@ app.controller("productController",function($scope,$rootScope,$http,$routeParams
 
  if($scope.product_type != "fenetres" && $scope.product_type != "verre_trempe" ){
    $scope.productTypeName = $scope.product_type;
+   switch ($routeParams.produit_type) {
+          case "portes":
+          $scope.productTypeNameAr = "أبواب";
+          break;
+          case "cuisines":
+          $scope.productTypeNameAr = "مطابخ";
+          break;
+          case "placards":
+          $scope.productTypeNameAr = "خرانة الملابس";
+          break;
+          case "aquarium":
+          $scope.productTypeNameAr = "أحواض السمك";
+          break;
+   }
  }else{
  switch ($routeParams.produit_type) {
         case "fenetres":
         $scope.productTypeName = "fenêtres";
+        $scope.productTypeNameAr = "نوافد";
         break;
         case "verre_trempe":
         $scope.productTypeName = "verre trempé";
+        $scope.productTypeNameAr = "زجاج";
         break;
  }
  }
@@ -23,32 +39,38 @@ app.controller("productController",function($scope,$rootScope,$http,$routeParams
    {
      href : 'fenetres',
      img : 'img/fenetre.jpg',
-     title: 'Fenêtres'
+     title: 'Fenêtres',
+     titleAr:'نوافذ'
    },
    {
      href : 'cuisines',
      img : 'img/cuisine.jpg',
-     title: 'Cuisines'
+     title: 'Cuisines',
+     titleAr:'مطابخ'
    },
    {
      href : 'portes',
      img : 'img/porte.jpg',
-     title: 'Portes'
+     title: 'Portes',
+     titleAr: 'أبواب'
    },
    {
      href : 'placards',
      img : 'img/placard.jpg',
-     title: 'Placards'
+     title: 'Placards',
+     titleAr:'خزانة الملابس'
    },
    {
      href : 'verre_trempe',
      img : 'img/verre_trempe.jpg',
-     title: 'Verre trempé'
+     title: 'Verre trempé',
+     titleAr:'زجاج'
    },
    {
      href : 'aquarium',
      img : 'img/aquarium.jpg',
-     title: 'Aquarium'
+     title: 'Aquarium',
+     titleAr:'أحواض السمك'
    }
  ]
  $scope.otherProductsList = getOtherProductsList();
