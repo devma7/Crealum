@@ -26,6 +26,7 @@
 #about-us .content  p{
   font-size: 1.3em;
   line-height: 33px;
+  padding: 0 12px;
 }
 #about-us .content li .content p{
     line-height: 22px;
@@ -66,3 +67,10 @@
 #product-item .breadcrumb{
   text-align: right;
 }
+
+ @media screen and (max-width:1199px) {
+   .main .navbar-header{
+     float: none;
+     padding: 0;
+   }
+ }

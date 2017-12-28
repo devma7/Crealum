@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="css/lightgallery.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link ng-if="!isFranch" rel="stylesheet" href="css/ar.css">
+  <link ng-if="!isFranch" rel="stylesheet" href="css/style-ar.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
@@ -31,13 +31,19 @@
 
 <body>
 <div class="container">
-  <div class="main"  ng-controller="mainController">
+  <div class="main">
     <!-- Navbar -->
 <!--
     <div ng-include="isFranch ? 'views/includes/navbar.html' : 'views/includes/ar/navbar.html'"></div>
 -->
 <div ng-if="isFranch" ng-include="'views/includes/navbar.html'"></div>
 <div ng-if="!isFranch" ng-include="'views/includes/ar/navbar.html'"></div>
+<section id="changLang">
+  <div class="content  hidden-md hidden-lg">
+    <a  ng-if="isFranch" ng-click="setLang()" href="#!{{url_ar}}">العربية</a>
+    <a  ng-if="!isFranch" ng-click="setLang()" href="#!{{url}}">français</a>
+  </div>
+</section>
     <div class="content">
 
     <div class="ng-view" autoscroll="true">  </div>
