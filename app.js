@@ -35,18 +35,17 @@ app.config(function($routeProvider,cfpLoadingBarProvider){
 
 app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) {
 
-  $rootScope.$on("$locationChangeStart", function(event, next, current) {
+  $rootScope.$on("$routeChangeStart", function(event, next, current) {
        cfpLoadingBar.start();
    });
-  $rootScope.$on('$locationChangeSuccess', function () {
+
+  $rootScope.$on('$routeChangeSuccess', function () {
   cfpLoadingBar.complete();
      setTimeout(function () {
       cfpLoadingBar.complete();
            }, 2000);
 
-        if (document.readyState == 'complete') {
-      //    $window.animate({scrollTop:0},1500);
-        }
+
         // get url
         var url = $location.path();
         if(url.indexOf("/ar")> -1){
