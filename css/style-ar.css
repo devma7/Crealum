@@ -32,10 +32,11 @@
     line-height: 22px;
 }
 #contact-us .content .info p{
-  text-align: center;
- font-size: 1.2em;
- line-height: 28px;
- padding: 0px 10px;
+  font-size: 1.2em;
+  line-height: 30px;
+  padding: 0px 23px;
+  text-align: justify;
+  text-align-last: right;
 }
 #contact-us .content form input{
   border-radius: 0;
@@ -47,15 +48,16 @@
   text-align: right;
 }
 #contact-us .content .info{
-  padding: 0px 20px;
+  padding: 0px 0px;
   margin-bottom: 30px;
 }
 #contact-us .cordonnee {
-  padding: 30px 0;
+  padding: 0px 0;
 }
 #contact-us .content .info .cordonnee li{
-  text-align: right;
-  font-size: 1.2em;
+ text-align: justify;
+ text-align-last: right;
+ font-size: 22px;
 }
 #contact-us .ville{
   text-align: right;

@@ -16,6 +16,5 @@ $scope.changeCity = function(){
 }
 // send email service
 sendEmail.send($scope,$http);
-$window.animate({scrollTop:0},1500);
 
 });

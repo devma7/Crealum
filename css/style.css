@@ -312,9 +312,9 @@ footer .content ul li a:hover{
   display: block;
   text-align: left;
 }
-#contact-us .content .info .cordonnee li>i{
-  font-size: 20px;
-}
+#contact-us .content .info .cordonnee i{
+  font-size: 25px;
+  margin: 0px 10px;}
 #contact-us .content  form{
   padding: 40px 20px;
   border : 1px solid rgb(217, 221, 226);
@@ -598,9 +598,10 @@ background-color: #ffffff00;;
 }
 #contact-us .content #map{
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 #contact-us .content .info .cordonnee li{
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .alert{
      position: fixed;
