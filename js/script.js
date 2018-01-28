@@ -1,7 +1,4 @@
 $(document).ready(function(){
-  // WOW initialisation
-    new WOW().init();
-
   $(this).scroll(function(){
     var y = $(this).scrollTop();
     var showPosition = 400;
@@ -16,3 +13,7 @@ $(document).ready(function(){
   });
 
 });
+// WOW initialisation
+  new WOW().init();
+  // Hook up slide show
+    $(".rslides").responsiveSlides();
