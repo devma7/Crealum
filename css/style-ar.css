@@ -35,8 +35,7 @@
   font-size: 1.2em;
   line-height: 30px;
   padding: 0px 23px;
-  text-align: justify;
-  text-align-last: right;
+  text-align: center;
 }
 #contact-us .content form input{
   border-radius: 0;
@@ -54,10 +53,13 @@
 #contact-us .cordonnee {
   padding: 0px 0;
 }
+#contact-us .cordonnee table {
+float: right;
+}
 #contact-us .content .info .cordonnee li{
  text-align: justify;
  text-align-last: right;
- font-size: 22px;
+ font-size: 18px;
 }
 #contact-us .ville{
   text-align: right;

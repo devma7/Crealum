@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  // WOW initialisation
+    new WOW().init();
+
   $(this).scroll(function(){
     var y = $(this).scrollTop();
     var showPosition = 400;

@@ -150,7 +150,7 @@ body{
 }
  #about-us .content > ul{
   padding: 50px 20px 70px 20px;
-  overflow: auto;
+  overflow: hidden;
   list-style: none;
 }
  #about-us .content ul li{
@@ -418,6 +418,7 @@ color: #999;
   padding: 10px 0px;
   /* height: 100%; */
   border: 2px solid #a3ccff;
+  margin-bottom: 40px;
 }
 #contact-us .content  #map a{
   background: 0;

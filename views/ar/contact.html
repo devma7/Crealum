@@ -16,7 +16,7 @@
       خطأ: لم يتم إرسال الرسالة
     </div>
 
-   <form ng-submit="sendMail(emailForm.$valid)" name="emailForm" class="col-md-12" novalidate >
+   <form ng-submit="sendMail(emailForm.$valid)" name="emailForm" class="col-md-12 wow fadeInRight data-wow-duration="2s" data-wow-delay="1s"" novalidate >
      <div class="form-group col-md-6" ng-class="{ 'has-error' : emailForm.nom.$invalid && emailForm.nom.$touched, 'has-success': emailForm.nom.$valid && !emailForm.nom.$pristine}">
        <label for="nom" class="sr-only">الإسم العائلي</label>
        <div class="input-group">
@@ -94,10 +94,10 @@
    </form>
    </div>
    <div class="info col-md-6 col-md-pull-6">
-     <div class="col-md-12">
+     <div class="col-md-12 wow fadeInLeft data-wow-duration="2s" data-wow-delay="1.5s"">
        <div id="map" style="width:100%"></div>
      </div>
-     <div class="col-md-12">
+     <div  class="col-md-12 wow fadeInUp data-wow-duration="2s" data-wow-delay="1.70s"">
        <ul class="cordonnee">
          <table>
            <tbody>
