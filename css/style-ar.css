@@ -20,7 +20,7 @@
   font-family: 'Cairo', sans-serif;
 }
 /* sections */
-#about-us .content > a, #services .content > a , #product-item .content >a{
+#about-us .content > a, #services .content > a , #product-item .content >a,#our-products  [href="#!contact"]{
   font-size: 1.3em;
 }
 #about-us .content  p{
