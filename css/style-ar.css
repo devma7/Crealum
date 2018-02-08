@@ -20,8 +20,9 @@
   font-family: 'Cairo', sans-serif;
 }
 /* sections */
-#about-us .content > a, #services .content > a , #product-item .content >a,#our-products  [href="#!contact"]{
+#about-us .content > a, #services .content > a , #product-item .content >a,#our-products  [href="#!contact"],.slider .presentation a{
   font-size: 1.3em;
+  font-family: 'Cairo', sans-serif;
 }
 #about-us .content  p{
   font-size: 1.3em;
@@ -71,7 +72,11 @@ float: right;
 #product-item .breadcrumb{
   text-align: right;
 }
-
+.slider .presentation h1 span{
+font-family: "cairo",sans-serif;
+font-size: .8em;
+line-height: 30px;
+}
  @media screen and (max-width:1199px) {
    .main .navbar-header{
      float: none;
