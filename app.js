@@ -34,6 +34,20 @@ app.config(function($routeProvider,cfpLoadingBarProvider){
 });
 
 app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) {
+  var getReq = {
+      method: 'GET',
+      url: 'getImages.inc.php'
+     }
+     var onSuccess = function (success){
+       //console.log(success.data);
+     $rootScope.Allimages = success.data;
+      }
+     var onError = function (error){
+     $rootScope.Allimages = undefined;
+    //console.log(error.status);
+       }
+    $http(getReq).then(onSuccess,onError);
+
 
   $rootScope.$on("$routeChangeStart", function(event, next, current) {
        cfpLoadingBar.start();
@@ -71,17 +85,5 @@ app.run(function($rootScope,$http,$window,$routeParams,$location,cfpLoadingBar) 
         }
 
          });
-  var getReq = {
-      method: 'GET',
-      url: 'getImages.inc.php'
-     }
-     var onSuccess = function (success){
-       //console.log(success.data);
-     $rootScope.Allimages = success.data;
-      }
-     var onError = function (error){
-     $rootScope.Allimages = undefined;
-    //console.log(error.status);
-       }
-    $http(getReq).then(onSuccess,onError);
+
 });

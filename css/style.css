@@ -93,7 +93,8 @@ body{
 /* sections */
 
  #about-us,#our-products,#contact-us,footer,#services,#product-item{
-  margin-top: 10px
+  margin-top: 10px;
+  overflow: auto;
  }
  #about-us .content,#our-products .content,#contact-us .content,footer .content,#services .content,#product-item .content{
   padding: 30px;
@@ -112,6 +113,10 @@ body{
   border-top-right-radius:  5px;
   border-top-left-radius:  5px;
  }
+ #our-products .title{
+  border-top-right-radius:  0px;
+  border-top-left-radius:  0px;
+ }
  #about-us .title h4, #our-products .title h4, #contact-us .title h4, #services .title h4{
   color: #ffa500;
   font-family: 'Raleway',serif;
@@ -119,7 +124,7 @@ body{
   font-weight: bold;
   text-align: center;
 }
-#about-us .content > a, #services .content > a , #product-item .content >a, #our-products  [href="#!contact"]{
+#about-us .content > a, #services .content > a , #product-item .content >a, #our-products  [href="#!contact"],.slider a{
   padding: 10px 30px;
   text-decoration: none;
   background-color: orange;
@@ -219,6 +224,51 @@ body{
 #our-products .content .item .content a:hover h3 {
   color: #000;
   font-weight: bold;
+}
+#our-products .presentation{
+  background-image: url("../img/background-products.jpg");
+  background-position: bottom;
+  padding: 40px;
+}
+.slider .presentation{
+  position: absolute;
+  z-index: 999;
+  left: 200px;
+  right: 200px;
+  bottom: 120px;
+}
+
+#our-products .presentation h1 ,.slider .presentation h1{
+  text-align: center;
+}
+
+.slider .presentation h1 span{
+  display: inline-block;
+  font-size: 27px;
+  line-height: 45px;
+  color: rgb(255, 165, 0);
+  background: rgba(255,255,255,0.8);
+  padding: 23px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #b5afaf;
+  text-transform: uppercase;
+}
+#our-products .presentation{
+
+}
+#our-products .presentation h1 span,#our-products .presentation p{
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#our-products .presentation p{
+font-size: 1.5em;
+}
+#our-products .tampon img{
+ position: absolute;
+ z-index: 999;
 }
 /* footer */
 footer{
@@ -553,6 +603,19 @@ background-color: #ffffff00;;
   width: 100%;
   border: 5px solid #fff;
   }
+  .loading{
+  background: #fafafa;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  }
+  .loading img{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  }
 /* media query */
 
  @media screen and (max-width:1199px) {
@@ -668,4 +731,5 @@ footer .content  ul li{
  margin: 0 5px;
 }
 
+}
    /* *** ********************** */

@@ -4,6 +4,20 @@ app.controller("productController",function($scope,$rootScope,$http,$routeParams
 
   // products controller
   $rootScope.product_type=$routeParams.produit_type;
+  var getReq = {
+      method: 'GET',
+      url: 'getImages.inc.php'
+     }
+     var onSuccess = function (success){
+       //console.log(success.data);
+     $rootScope.Allimages = success.data;
+      }
+     var onError = function (error){
+     $rootScope.Allimages = undefined;
+    //console.log(error.status);
+       }
+    $http(getReq).then(onSuccess,onError);
+    
   var all_Images = $rootScope.Allimages;
   $scope.images = all_Images[$scope.product_type];
 
