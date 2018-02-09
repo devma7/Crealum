@@ -22,7 +22,8 @@
 /* sections */
 #about-us .content > a, #services .content > a , #product-item .content >a,#our-products  [href="#!contact"],.slider .presentation a{
   font-size: 1.3em;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', sans-serif !important;
+
 }
 #about-us .content  p{
   font-size: 1.3em;
@@ -72,8 +73,12 @@ float: right;
 #product-item .breadcrumb{
   text-align: right;
 }
+#our-products .presentation h1 span{
+  font-family: 'Cairo', sans-serif !important;
+
+}
 .slider .presentation h1 span{
-font-family: "cairo",sans-serif;
+font-family: 'Cairo', sans-serif !important;
 font-size: .8em;
 line-height: 30px;
 }
@@ -81,5 +86,9 @@ line-height: 30px;
    .main .navbar-header{
      float: none;
      padding: 0;
+   }
+   .slider .presentation h1 span{
+     font-size: .5em;
+    line-height: 40px;
    }
  }

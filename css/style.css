@@ -235,7 +235,7 @@ body{
   z-index: 999;
   left: 200px;
   right: 200px;
-  bottom: 120px;
+  bottom: 170px;
 }
 
 #our-products .presentation h1 ,.slider .presentation h1{
@@ -246,11 +246,11 @@ body{
   display: inline-block;
   font-size: 27px;
   line-height: 45px;
-  color: rgb(255, 165, 0);
-  background: rgba(255,255,255,0.8);
+  color: rgb(255, 255, 255);
+  background: rgba(150, 150, 150, 0.77);
   padding: 23px;
   font-weight: bolder;
-  text-shadow: 2px 2px 2px #b5afaf;
+  text-shadow: 2px 2px 2px #151414a6;
   text-transform: uppercase;
 }
 #our-products .presentation{
@@ -656,6 +656,26 @@ background-color: #ffffff00;;
 }
 #our-products .content .item .content .title{
   box-shadow: 5px 5px 5px 8px #000503
+}
+.slider .presentation{
+  left: 30px;
+  right: 30px;
+  bottom: 0px;
+  top: 132px;
+}
+.slider .presentation h1 span{
+font-size: 16px;
+line-height: 25px;
+padding: 5px 13px;
+}
+#our-products .presentation{
+  padding: 5px;
+}
+#our-products .presentation h1 span {
+ font-size: .6em;
+}
+#our-products .presentation p{
+font-size: 1.2em
 }
 /*product-item section*/
 #product-item .content ul li{
